@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 import smtplib 
 # Corpo da mensagem do email 
 msg = MIMEMultipart()  
-#detalhes descartaveis
+# Detalhes descartaveis
 print('Carregando...')
 time.sleep(0.1)
 print('Carregado com sucesso!')
@@ -21,7 +21,7 @@ msg['To'] = input("Insira o destinatário: ")
 msg['Subject'] = input("Insira o título do email: ")
 message = input("Insira a mensagem que você deseja enviar: ") 
 msg.attach(MIMEText (message, "plain"))
-#port
+# Port
 server = smtplib.SMTP('smtp.gmail.com', port=587)
 server.starttls() 
 server.login(msg['From'], password) 
